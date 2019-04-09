@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    # libs
+    'widget_tweaks',
+    # apps
     'core',
     'catalog',
 ]
@@ -135,6 +137,14 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+
+# E-mail
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'jcguitar1994@gmail.com'
+EMAIL_HOST_PASSWORD = 'comput@dor-guit@rr@-JUDO'
+EMAIL_PORT = '587'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'jcguitar1994@gmail.com'
 
 try:
     from .local_settings import *
